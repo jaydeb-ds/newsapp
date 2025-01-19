@@ -1,14 +1,12 @@
-// import logo from './logo.svg';
-// import './App.css';
-import Todo from './todo';
-import { useState } from 'react';
 
+import { useState } from 'react';
+import Timer from "./timer/timer.jsx"
 function App() {
 
   
   return(
     <div>
-          <Todo/>
+      <Timer/>
     </div>
   )
 }
