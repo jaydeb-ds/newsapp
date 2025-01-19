@@ -1,12 +1,11 @@
-
-import { useState } from 'react';
-import Timer from "./timer/timer.jsx"
+import './App.css';
+import Todo from "./todo.jsx"
 function App() {
 
   
   return(
     <div>
-      <Timer/>
+      <Todo/>
     </div>
   )
 }
