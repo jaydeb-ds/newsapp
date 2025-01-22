@@ -1,11 +1,15 @@
 import './App.css';
-import Todo from "./todo.jsx"
+import Loader from './components/loader';
+import Navbar from './components/nav';
+import Newsapp from './components/newsapp';
 function App() {
 
   
   return(
     <div>
-      <Todo/>
+      <Newsapp/>
+      {/* <Navbar/> */}
+      {/* <Loader/> */}
     </div>
   )
 }
