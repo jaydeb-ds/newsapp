@@ -10,7 +10,6 @@ function Newsapp() {
     const [search, setSearch] = useState("india");
     const [newsData, setNewsData] = useState(null)
 
-    // const API_Key = "60db46bd9b0543acbcfcfab632c9046a"
     const API_Key = import.meta.env.VITE_APP_SECRET_KEY
 
     const getData = async () => {
