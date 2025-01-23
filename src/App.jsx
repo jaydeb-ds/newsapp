@@ -8,6 +8,8 @@ function App() {
   return(
     <div>
       <Newsapp/>
+      {/* <h1>{process.env.REACT_APP_SECRET_KEY}</h1> */}
+
       {/* <Navbar/> */}
       {/* <Loader/> */}
     </div>

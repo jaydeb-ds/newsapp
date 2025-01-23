@@ -10,10 +10,8 @@ function Newsapp() {
     const [search, setSearch] = useState("india");
     const [newsData, setNewsData] = useState(null)
 
-    const API_Key = "60db46bd9b0543acbcfcfab632c9046a"
-
-
-
+    // const API_Key = "60db46bd9b0543acbcfcfab632c9046a"
+    const API_Key = import.meta.env.VITE_APP_SECRET_KEY
 
     const getData = async () => {
         const response = await fetch(`https://newsapi.org/v2/everything?q=${search}&apiKey=${API_Key}`)
@@ -21,6 +19,7 @@ function Newsapp() {
         // console.log(jsonData.articles)
         setNewsData(jsonData.articles);
     }
+
 
     const handleInput = (e) => {
         setSearch(e.target.value)
@@ -40,8 +39,10 @@ function Newsapp() {
     useEffect(() => {
         getData()
         console.log("just once");
-
+        console.log("api key ",API_Key);
+        
     },[])
+
 
   
 
@@ -134,7 +135,7 @@ function Newsapp() {
            {newsData? <Cards data={newsData} />: <Loader/>} 
         </div>
 
-
+        {/* <h1>{process.env.REACT_APP_SECRET_KEY}</h1> */}
 
     </>)
 }
