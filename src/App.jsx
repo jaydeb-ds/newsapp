@@ -1,19 +1,26 @@
-import './App.css';
-import Loader from './components/loader';
-import Navbar from './components/nav';
-import Newsapp from './components/newsapp';
+import React, { useEffect, useState } from "react"
+import "./App.css"
+import Footer from "./components/footer/Footer"
+import Header from "./components/header/Header"
+import Home from "./components/home/Home"
+
 function App() {
-
-  
-  return(
-    <div>
-      <Newsapp/>
-      {/* <h1>{process.env.REACT_APP_SECRET_KEY}</h1> */}
-
-      {/* <Navbar/> */}
-      {/* <Loader/> */}
-    </div>
+  const getMode = () => {
+    return JSON.parse(localStorage.getItem("mode"))
+  }
+  const [dark, setMode] = useState(getMode())
+  useEffect(() => {
+    localStorage.setItem("mode", JSON.stringify(dark))
+  }, [dark])
+  return (
+    <>
+      <div className={dark ? "app" : "light"}>
+        <Header dark={dark} setMode={setMode} />
+        <Home />
+        <Footer />
+      </div>
+    </>
   )
 }
 
-export default App;
+export default App
