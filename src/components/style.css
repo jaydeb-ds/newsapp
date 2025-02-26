@@ -1,0 +1,33 @@
+
+/* 
+    This file contains the css for the components in the project. 
+    This file is used in nabar.jsx file.
+*/
+.drop{
+    cursor: pointer; 
+    &:hover{
+        background-color: rgb(47, 104, 157);
+        color: white
+    }
+}
+
+.drop_down{
+    margin-left: 20px;
+   font-family: Arial, Helvetica, sans-serif;
+   box-shadow: 5px 5px 10px 0 rgba(15, 43, 205, 0.437);
+    border-radius: 20px;
+    padding: 5px;
+    color: black;
+    cursor: pointer;
+    &:hover{
+        background-color: rgb(47, 104, 157);
+        color: white;
+        box-shadow: 5px 5px 10px 0 rgba(26, 40, 122, 0.964);
+    }
+    &:active{
+        color: white;
+        background-color: rgb(47, 104, 157);
+        transform: scale(0.9);
+    }
+}
+
